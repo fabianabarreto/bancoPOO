@@ -3,6 +3,7 @@ package banco1;
 /**
  * @brief Classe Conta
  * @author Milene Vieira <milene_vi@hotmail.com>
+ * @author Fabiana Barreto <fabiana_barreto2@hotmail.com>
  * @since 13/03/2016
  */
 public class Conta {
@@ -52,7 +53,11 @@ public class Conta {
     }
 
     public void setSaldo(double saldo) {
-        this.saldo = saldo;
+        if (tipo == 'c') {
+            this.saldo = 100;
+        } else if (tipo == 'p') {
+            this.saldo = 50;
+        }
     }
 
     public void creditar(float valor) {
